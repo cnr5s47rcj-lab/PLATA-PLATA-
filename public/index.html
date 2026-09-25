@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boutique</title>
+  <meta name="description" content="Découvrez nos produits, livraison rapide et paiement sécurisé.">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="container">
+      <a class="logo" href="/" data-shop-name>Plata Plata</a>
+      <a class="cart-link" href="/cart.html">🛒 Panier <span class="badge" data-cart-count>0</span></a>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <h1>Des produits de qualité, livrés chez vous</h1>
+      <p>Paiement sécurisé · Livraison rapide · Satisfait ou remboursé 14 jours</p>
+    </section>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="products"><p>Chargement…</p></div>
+  </main>
+  <footer class="site">
+    <div class="container">
+      <span>© <span data-shop-name>Plata Plata</span> — Paiement 100 % sécurisé par Stripe</span>
+      <nav>
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <a href="/cgv.html">CGV</a>
+        <a href="/confidentialite.html">Confidentialité</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/app.js"></script>
+  <script>
+    let products = [];
+    let category = 'Tout';
+
+    function render() {
+      const list = category === 'Tout' ? products : products.filter((p) => p.category === category);
+      document.getElementById('products').innerHTML = list.map((p) => {
+        const out = p.stock === 0;
+        const low = p.stock !== undefined && p.stock > 0 && p.stock <= 5;
+        return `
+          <article class="card">
+            <img src="${Shop.escape(p.image)}" alt="${Shop.escape(p.name)}" loading="lazy">
+            <div class="body">
+              <h3>${Shop.escape(p.name)}</h3>
+              <p>${Shop.escape(p.description)}</p>
+              ${low ? `<span class="stock-low">Plus que ${p.stock} en stock !</span>` : ''}
+              <div class="row">
+                <span class="price">${Shop.money(p.price)}</span>
+                <button class="btn" data-add="${Shop.escape(p.id)}" ${out ? 'disabled' : ''}>${out ? 'Épuisé' : 'Ajouter'}</button>
+              </div>
+            </div>
+          </article>`;
+      }).join('') || '<p>Aucun produit pour le moment.</p>';
+    }
+
+    function renderFilters() {
+      const cats = ['Tout', ...new Set(products.map((p) => p.category).filter(Boolean))];
+      document.getElementById('filters').innerHTML = cats.map((c) =>
+        `<button class="chip ${c === category ? 'active' : ''}" data-cat="${Shop.escape(c)}">${Shop.escape(c)}</button>`
+      ).join('');
+    }
+
+    document.addEventListener('click', (e) => {
+      const add = e.target.closest('[data-add]');
+      if (add) Shop.add(add.dataset.add);
+      const chip = e.target.closest('[data-cat]');
+      if (chip) { category = chip.dataset.cat; renderFilters(); render(); }
+    });
+
+    Shop.init().then(async () => {
+      products = await fetch('/api/products').then((r) => r.json());
+      renderFilters();
+      render();
+    });
+  </script>
+</body>
+</html>

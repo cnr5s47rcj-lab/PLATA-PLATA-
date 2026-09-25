@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panier</title>
+  <meta name="description" content="Votre panier">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="container">
+      <a class="logo" href="/" data-shop-name>Plata Plata</a>
+      <a class="cart-link" href="/cart.html">🛒 Panier <span class="badge" data-cart-count>0</span></a>
+    </div>
+  </header>
+  <main class="container">
+    <div class="cart-layout">
+      <section class="panel">
+        <h2 style="margin-top:0">Votre panier</h2>
+        <div id="items"></div>
+      </section>
+      <aside class="panel">
+        <div class="summary-row"><span>Sous-total</span><span id="subtotal">—</span></div>
+        <div class="summary-row"><span>Livraison</span><span>Calculée au paiement</span></div>
+        <div class="summary-row total"><span>Total</span><span id="total">—</span></div>
+        <button class="btn block" id="checkout">Payer maintenant</button>
+        <p class="error" id="error"></p>
+        <p style="color:var(--muted);font-size:.85rem">🔒 Paiement sécurisé par Stripe (carte, Apple Pay, Google Pay).</p>
+      </aside>
+    </div>
+  </main>
+  <footer class="site">
+    <div class="container">
+      <span>© <span data-shop-name>Plata Plata</span> — Paiement 100 % sécurisé par Stripe</span>
+      <nav>
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <a href="/cgv.html">CGV</a>
+        <a href="/confidentialite.html">Confidentialité</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/app.js"></script>
+  <script>
+    let products = [];
+
+    function render() {
+      const cart = Shop.getCart().filter((l) => products.some((p) => p.id === l.id));
+      Shop.setCart(cart);
+      const items = document.getElementById('items');
+      if (!cart.length) {
+        items.innerHTML = '<p>Ton panier est vide. <a href="/">Voir les produits</a></p>';
+      } else {
+        items.innerHTML = cart.map((l) => {
+          const p = products.find((x) => x.id === l.id);
+          return `
+            <div class="cart-item">
+              <img src="${Shop.escape(p.image)}" alt="">
+              <div class="info">
+                <strong>${Shop.escape(p.name)}</strong><br>
+                <span style="color:var(--muted)">${Shop.money(p.price)}</span>
+              </div>
+              <div class="qty">
+                <button data-dec="${Shop.escape(p.id)}" aria-label="Moins">−</button>
+                <span>${l.quantity}</span>
+                <button data-inc="${Shop.escape(p.id)}" aria-label="Plus">+</button>
+              </div>
+            </div>`;
+        }).join('');
+      }
+      const total = cart.reduce((sum, l) => sum + products.find((p) => p.id === l.id).price * l.quantity, 0);
+      document.getElementById('subtotal').textContent = Shop.money(total);
+      document.getElementById('total').textContent = Shop.money(total);
+      document.getElementById('checkout').disabled = !cart.length;
+    }
+
+    document.addEventListener('click', (e) => {
+      const inc = e.target.closest('[data-inc]');
+      const dec = e.target.closest('[data-dec]');
+      if (!inc && !dec) return;
+      const id = (inc || dec).dataset[inc ? 'inc' : 'dec'];
+      const cart = Shop.getCart();
+      const line = cart.find((l) => l.id === id);
+      line.quantity += inc ? 1 : -1;
+      Shop.setCart(cart.filter((l) => l.quantity > 0));
+      render();
+    });
+
+    document.getElementById('checkout').addEventListener('click', async (e) => {
+      const btn = e.currentTarget;
+      const error = document.getElementById('error');
+      btn.disabled = true;
+      btn.textContent = 'Redirection…';
+      error.textContent = '';
+      try {
+        const res = await fetch('/api/checkout', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ cart: Shop.getCart() }),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error);
+        window.location.href = data.url;
+      } catch (err) {
+        error.textContent = err.message || 'Erreur, réessaie.';
+        btn.disabled = false;
+        btn.textContent = 'Payer maintenant';
+      }
+    });
+
+    Shop.init().then(async () => {
+      products = await fetch('/api/products').then((r) => r.json());
+      render();
+    });
+  </script>
+</body>
+</html>

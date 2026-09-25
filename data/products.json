@@ -1,0 +1,56 @@
+[
+  {
+    "id": "montre-01",
+    "name": "Montre Classique",
+    "description": "Montre élégante en acier inoxydable, bracelet cuir véritable.",
+    "price": 4990,
+    "image": "https://picsum.photos/seed/montre/600/450",
+    "category": "Accessoires",
+    "stock": 25
+  },
+  {
+    "id": "sac-01",
+    "name": "Sac à dos Urbain",
+    "description": "Sac à dos imperméable avec compartiment ordinateur 15 pouces.",
+    "price": 3990,
+    "image": "https://picsum.photos/seed/sac/600/450",
+    "category": "Bagagerie",
+    "stock": 40
+  },
+  {
+    "id": "casque-01",
+    "name": "Casque Bluetooth",
+    "description": "Réduction de bruit active, 30 h d'autonomie.",
+    "price": 7990,
+    "image": "https://picsum.photos/seed/casque/600/450",
+    "category": "High-tech",
+    "stock": 15
+  },
+  {
+    "id": "lunettes-01",
+    "name": "Lunettes de soleil",
+    "description": "Verres polarisés UV400, monture légère.",
+    "price": 2490,
+    "image": "https://picsum.photos/seed/lunettes/600/450",
+    "category": "Accessoires",
+    "stock": 60
+  },
+  {
+    "id": "gourde-01",
+    "name": "Gourde Isotherme",
+    "description": "Garde au froid 24 h et au chaud 12 h. 750 ml.",
+    "price": 1990,
+    "image": "https://picsum.photos/seed/gourde/600/450",
+    "category": "Maison",
+    "stock": 100
+  },
+  {
+    "id": "bougie-01",
+    "name": "Bougie Parfumée",
+    "description": "Cire de soja naturelle, parfum vanille-ambre, 40 h de combustion.",
+    "price": 1590,
+    "image": "https://picsum.photos/seed/bougie/600/450",
+    "category": "Maison",
+    "stock": 80
+  }
+]

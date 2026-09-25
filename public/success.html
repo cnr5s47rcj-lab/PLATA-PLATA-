@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merci pour votre commande</title>
+  <meta name="description" content="Commande confirmée">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="container">
+      <a class="logo" href="/" data-shop-name>Plata Plata</a>
+      <a class="cart-link" href="/cart.html">🛒 Panier <span class="badge" data-cart-count>0</span></a>
+    </div>
+  </header>
+  <main class="container center">
+    <h1>🎉 Merci pour votre commande !</h1>
+    <p>Votre paiement a bien été reçu. Un e-mail de confirmation vous sera envoyé.</p>
+    <p style="color:var(--muted)">Référence : <code id="ref"></code></p>
+    <a class="btn" href="/" style="display:inline-block;text-decoration:none;margin-top:16px">Continuer mes achats</a>
+  </main>
+  <footer class="site">
+    <div class="container">
+      <span>© <span data-shop-name>Plata Plata</span> — Paiement 100 % sécurisé par Stripe</span>
+      <nav>
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <a href="/cgv.html">CGV</a>
+        <a href="/confidentialite.html">Confidentialité</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/app.js"></script>
+  <script>
+    document.getElementById('ref').textContent = new URLSearchParams(location.search).get('session_id') || '—';
+    Shop.setCart([]);
+    Shop.init();
+  </script>
+</body>
+</html>
