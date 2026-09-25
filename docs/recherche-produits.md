@@ -15,6 +15,44 @@
 
 **Prix qui convertit le mieux** : vente entre 25 et 50 $, pour un achat fournisseur de 10 à 20 $ (Dropified).
 
+
+## 1 bis. Liste détaillée : les produits tendance aux États-Unis (septembre 2026)
+
+| # | Produit | Catégorie | Pourquoi ça cartonne | Revendable facilement en France ? |
+|---|---|---|---|---|
+| 1 | Baume au collagène PDRN (Medicube) | Soin visage | Meilleure vente de TikTok Shop US en juillet 2026 | ⛔ Cosmétique (réglementé) |
+| 2 | Crayon à lèvres « Stay-N-Peel » | Maquillage | 46,6 M$ de ventes en 2025, le plus gros produit suivi | ⛔ Cosmétique |
+| 3 | Teinte à lèvres Wonderskin | Maquillage | 1 vente toutes les 5 secondes sur TikTok Shop | ⛔ Cosmétique |
+| 4 | Parfums (#PerfumeTok) | Parfum | Tendance n°1 citée sur TikTok | ⛔ Cosmétique / contrefaçon |
+| 5 | Patchs anti-boutons (Mighty Patch) | Soin | Devenu un accessoire de mode, stars des ventes Amazon | ⛔ Cosmétique / dispositif |
+| 6 | Patchs contour des yeux | Soin | Produit à croissance forte selon Exploding Topics | ⛔ Cosmétique |
+| 7 | Multivitamines liquides (MaryRuth's) | Compléments | ~29,9 M$ de ventes | ⛔ Compléments (réglementé) |
+| 8 | Mouth tape (bande buccale pour dormir) | Sommeil | Une des tendances sommeil qui grimpent le plus vite | ✅ Oui |
+| 9 | Perles parfumées (scent beads) | Maison | Recherches en forte hausse 2025–2026 | ⚠️ Oui, avec fiche de sécurité |
+| 10 | Gourde Stanley Quencher et gourdes stylées | Maison | En tête de la catégorie Maison sur Amazon | ⚠️ Marque déposée : vends une gourde générique de qualité |
+| 11 | Filtre à eau anti-microplastiques | Maison | Marque Sans : ~100 M$ de CA prévu en 2026 | ⚠️ Produit cher, allégations à prouver |
+| 12 | Étagère magnétique (frigo, machine à laver) | Maison | En forte hausse, septembre 2026 | ✅ Oui |
+| 13 | SnackSpin (plateau à snacks rotatif « fleur ») | Cuisine | Gadget viral « effet waouh » | ✅ Oui |
+| 14 | Cuillère à glace chauffante | Cuisine | Gadget viral Amazon | ✅ Oui |
+| 15 | Spatules et cuillères silicone à manche en noyer | Cuisine | Meilleure vente Amazon de septembre | ✅ Oui (concurrence Amazon) |
+| 16 | Mousseur à lait, hachoir 10-en-1, papier cuisson pour air fryer | Cuisine | Movers & Shakers Amazon | ✅ Oui (prix bas sur Amazon.fr) |
+| 17 | Blender portable | Cuisine / sport | Gadget viral récurrent | ⚠️ Électrique (CE) |
+| 18 | Mini-projecteur | High-tech | Coût faible, grande valeur perçue | ⚠️ Électrique (CE) |
+| 19 | Écran d'ordinateur portable pliable | High-tech | Recherches en hausse, septembre 2026 | ⚠️ Électrique (CE) |
+| 20 | Lumières LED d'ambiance, projecteur « ciel étoilé » | Déco | Très fort sur TikTok (effet visuel) | ⚠️ Électrique (CE) |
+| 21 | Désinfecteur UV de brosse à dents | Salle de bain | Cité dans les vidéos « TikTok made me buy it » | ⚠️ Électrique (CE) |
+| 22 | Mini-aspirateur (voiture / bureau) | High-tech | Gadget tendance 2026 | ⚠️ Électrique (CE) |
+| 23 | Coupe-ongles électrique pour bébé (Momcozy) | Bébé | N°1 des ventes UK la semaine du 3 août 2026 | ⚠️ Électrique et produit pour bébé : normes strictes |
+| 24 | Gourde portable pour chien | Animaux | Viral « TikTok made me buy it » | ✅ Oui |
+| 25 | Fontaine à chat, tapis à lécher, nettoyeur de pattes, brosse anti-poils | Animaux | Meilleures ventes animaux 2026 | ✅ Oui |
+| 26 | Tapis rafraîchissant pour chien | Animaux | Coût 6–12 $, vendu 24–39 $ | ✅ Oui (été) |
+| 27 | Lampe chauffe-bougie | Déco | A explosé fin 2025, fort en fin d'année | ⚠️ Électrique (CE) |
+| 28 | Couvertures lestées / chauffantes | Cocooning | Forte croissance au 4e trimestre (40–100 $) | ✅ lestée / ⚠️ chauffante |
+| 29 | Collier prénom personnalisé | Bijoux / cadeau | Cadeau phare de Noël | ✅ Oui (acier sans nickel) |
+| 30 | Bouche-trou de siège auto | Auto | Achat d'impulsion, pas cher | ✅ Oui |
+| 31 | Désodorisants voiture | Auto | Dans le top des revenus TikTok Shop | ✅ Oui |
+| 32 | Jupe drapée, ensembles cosy d'automne, jean large taille haute | Mode | Jupe drapée = produit n°1 en hausse de septembre (Exploding Topics) | ⚠️ Oui, mais les retours de tailles sont fréquents |
+
 ## 2. Le filtre « est-ce que ça marchera en France ? »
 
 Ce qui est n°1 aux USA n'est pas forcément le meilleur choix pour démarrer en France, à cause de la réglementation européenne :
@@ -73,6 +111,13 @@ Je n'ai pas pu accéder directement à ces sites. Ce sont ceux qui confirment la
 5. **Commande un échantillon** des 2 finalistes avant de lancer.
 
 ## Sources
+- [Exploding Topics : Trending Product Topics, septembre 2026](https://explodingtopics.com/product-topics)
+- [Exploding Topics : 44 Trending Products](https://explodingtopics.com/blog/trending-products)
+- [TODAY : Amazon Bestsellers, septembre 2026](https://www.today.com/shop/amazon-september-bestsellers-2026-rcna594127)
+- [Sell on Amazon : produits à forte demande 2026](https://sell.amazon.com/blog/products-to-sell)
+- [IChiba : 25 Trending Products in the USA](https://ichiba.net/en/blog/trending-products-in-usa)
+- [Sell The Trend : Highest Revenue TikTok Shop Products](https://www.sellthetrend.com/reports/highest-revenue-tiktok-shop)
+- [BeastCompare : Viral Amazon Gadgets 2026](https://www.beastcompare.com/articles/top-8-viral-amazon-gadgets-make-life-easier-2026)
 - [Kalodata : 2026 TikTok Shop best-selling products](https://www.kalodata.com/blog/tiktok/the-2026-tiktok-shop-goldmine-20-best-selling-products-the-data-behind-the-viral-trends/)
 - [AdNabu : TikTok Trending Products 2026](https://blog.adnabu.com/tiktok/tiktok-trending-products/)
 - [Zendrop : Trending Dropshipping Pet Products 2026](https://www.zendrop.com/blog/dropshipping-pet-products/)
